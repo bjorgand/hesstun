@@ -751,7 +751,8 @@ a {
       padding: 1em 2em; } }
 
 .site-branding {
-  min-height: 65px; }
+  min-height: 65px;
+  max-height: 90px; }
 
 .site-title {
   display: none; }

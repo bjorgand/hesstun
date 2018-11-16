@@ -888,6 +888,7 @@ a:hover, a:active {
 
 .site-branding {
 	min-height: 65px;
+	max-height: 90px;
 }
 
 .site-title {
