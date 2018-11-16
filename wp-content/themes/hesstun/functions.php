@@ -83,6 +83,59 @@ if ( ! function_exists( 'hesstun_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'hesstun_setup' );
 
+
+/**
+ * Register custom fonts.     'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,500,700'
+ */
+function hesstun_fonts_url() {
+	$fonts_url = '';
+
+	/*
+	 * Translators: If there are characters in your language that are not
+	 * supported by Open Sans, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$open_sans = _x( 'on', 'Open Sans font: on or off', 'hesstun' );
+
+	if ( 'off' !== $open_sans ) {
+		$font_families = array();
+
+		$font_families[] = 'Open Sans:300,300i,400,400i, 700';
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return esc_url_raw( $fonts_url );
+}
+
+/**
+ * Add preconnect for Google Fonts.
+ *
+ * @since Twenty Seventeen 1.0
+ *
+ * @param array  $urls           URLs to print for resource hints.
+ * @param string $relation_type  The relation type the URLs are printed.
+ * @return array $urls           URLs to print for resource hints.
+ */
+function hesstun_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'hesstun-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+		$urls[] = array(
+			'href' => 'https://fonts.gstatic.com',
+			'crossorigin',
+		);
+	}
+
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'hesstun_resource_hints', 10, 2 );
+
+
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -120,6 +173,9 @@ add_action( 'widgets_init', 'hesstun_widgets_init' );
  * Enqueue scripts and styles.
  */
 function hesstun_scripts() {
+	// Enqueue Google Font: Open Sans
+	wp_enqueue_style('hesstun', hesstun_fonts_url());
+
 	wp_enqueue_style( 'hesstun-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'hesstun-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
