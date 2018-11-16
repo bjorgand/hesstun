@@ -1,0 +1,40 @@
+.site-header {
+	position: relative;
+	padding: 1em;
+	font-family: $font__sans;
+	color: $color__logo;
+	background-color: $color__header;
+	
+	display: flex;
+	
+	@media screen and (min-width: $query__small) {
+		padding: 1em 2em;
+	}
+}
+
+.site-branding {
+	min-height: 65px;
+}
+
+.site-title {
+	display: none;
+}
+
+.site-description {
+	display: none;
+}
+
+@media screen and (min-width: $query__medium) {
+	.site-header {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.site-branding {
+		width: 35%;
+	}
+	
+	.site-navigation {
+		width: 55%;
+	}
+}
