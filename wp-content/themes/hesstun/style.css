@@ -832,7 +832,6 @@ a:hover, a:active {
 .comment-content:before,
 .comment-content:after,
 .site-header:before,
-.site-header:after,
 .site-content:before,
 .site-content:after,
 .site-footer:before,
@@ -845,7 +844,6 @@ a:hover, a:active {
 .clear:after,
 .entry-content:after,
 .comment-content:after,
-.site-header:after,
 .site-content:after,
 .site-footer:after {
 	clear: both;
@@ -878,6 +876,8 @@ a:hover, a:active {
 	background-color: #FFF;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 @media screen and (min-width: 600px) {
@@ -887,16 +887,13 @@ a:hover, a:active {
 }
 
 .site-branding {
-	min-height: 65px;
-	max-height: 90px;
+	min-height: 70px;
 }
 
-.site-title {
-	display: none;
-}
-
-.site-description {
-	display: none;
+.custom-logo-link img {
+	display: inline-block;
+	height: 70px;
+	width: auto;
 }
 
 @media screen and (min-width: 900px) {
@@ -908,6 +905,8 @@ a:hover, a:active {
 	}
 	.site-branding {
 		width: 35%;
+		-ms-flex: 1 0 auto;
+		    flex: 1 0 auto;
 	}
 	.site-navigation {
 		width: 55%;

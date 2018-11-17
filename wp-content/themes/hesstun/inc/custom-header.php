@@ -66,6 +66,18 @@ if ( ! function_exists( 'hesstun_header_style' ) ) :
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
 		<?php endif; ?>
+			
+			
+		<?php
+		// Are we on the front page? If so, center the elements <3
+		if ( is_front_page() ) :
+			?>
+			.custom-logo-link {
+				display: block;
+				margin: 0 auto;
+			}
+		<?php endif; ?>	
+			
 		</style>
 		<?php
 	}

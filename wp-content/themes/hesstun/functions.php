@@ -44,7 +44,7 @@ if ( ! function_exists( 'hesstun_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'hesstun' ),
+			'menu-1' => esc_html__( 'Header', 'hesstun' ),
 		) );
 
 		/*
@@ -74,8 +74,8 @@ if ( ! function_exists( 'hesstun_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 120,
-			'width'       => 120,
+			'height'      => 90,
+			'width'       => 90,
 			'flex-width'  => true,
 
 		) );
@@ -133,7 +133,6 @@ function hesstun_resource_hints( $urls, $relation_type ) {
 	return $urls;
 }
 add_filter( 'wp_resource_hints', 'hesstun_resource_hints', 10, 2 );
-
 
 
 /**

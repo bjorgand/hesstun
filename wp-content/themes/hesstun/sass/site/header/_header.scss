@@ -2,10 +2,11 @@
 	position: relative;
 	padding: 1em;
 	font-family: $font__sans;
-	color: $color__logo;
-	background-color: $color__header;
+	color: $color__mainblue;
+	background-color: $color__bg;
 	
 	display: flex;
+	flex-wrap: wrap;
 	
 	@media screen and (min-width: $query__small) {
 		padding: 1em 2em;
@@ -13,18 +14,17 @@
 }
 
 .site-branding {
-	min-height: 65px;
-	max-height: 90px;
+	min-height: 70px;	
 }
 
-.site-title {
-	display: none;
+.custom-logo-link {
+	
+	img {
+		display: inline-block;
+		height: 70px;
+		width: auto;
+	}
 }
-
-.site-description {
-	display: none;
-}
-
 @media screen and (min-width: $query__medium) {
 	.site-header {
 		display: flex;
@@ -33,6 +33,7 @@
 	
 	.site-branding {
 		width: 35%;
+		flex: 1 0 auto;
 	}
 	
 	.site-navigation {

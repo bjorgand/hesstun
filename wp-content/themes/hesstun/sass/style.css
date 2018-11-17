@@ -707,7 +707,6 @@ a {
 .comment-content:before,
 .comment-content:after,
 .site-header:before,
-.site-header:after,
 .site-content:before,
 .site-content:after,
 .site-footer:before,
@@ -719,7 +718,6 @@ a {
 .clear:after,
 .entry-content:after,
 .comment-content:after,
-.site-header:after,
 .site-content:after,
 .site-footer:after {
   clear: both; }
@@ -745,20 +743,19 @@ a {
   font-family: "Open Sans", "arial", "Lucida Sans", "Segoe UI", "Tahoma", sans-serif;
   color: #086199;
   background-color: #FFF;
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
   @media screen and (min-width: 600px) {
     .site-header {
       padding: 1em 2em; } }
 
 .site-branding {
-  min-height: 65px;
-  max-height: 90px; }
+  min-height: 70px; }
 
-.site-title {
-  display: none; }
-
-.site-description {
-  display: none; }
+.custom-logo-link img {
+  display: inline-block;
+  height: 70px;
+  width: auto; }
 
 @media screen and (min-width: 900px) {
   .site-header {
@@ -766,7 +763,8 @@ a {
     justify-content: space-between; }
 
   .site-branding {
-    width: 35%; }
+    width: 35%;
+    flex: 1 0 auto; }
 
   .site-navigation {
     width: 55%; } }
