@@ -11,6 +11,7 @@
  * @package Hesstun
  */
 
+
 /**
  * Set up the WordPress core custom header feature.
  *
@@ -18,7 +19,7 @@
  */
 function hesstun_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'hesstun_custom_header_args', array(
-		'default-image'          => '',
+		'default-image'          => get_template_directory_uri() . '../images/logo.png',
 		'default-text-color'     => 'ffffff',
 		'width'                  => 1000,
 		'height'                 => 250,
@@ -68,15 +69,29 @@ if ( ! function_exists( 'hesstun_header_style' ) ) :
 		<?php endif; ?>
 			
 			
-		<?php
-		// Are we on the front page? If so, center the elements <3
-		if ( is_front_page() ) :
-			?>
-			.custom-logo-link {
-				display: block;
-				margin: 0 auto;
+		<?php 
+		// Are we on the front page?
+		if (is_front_page() ) : 
+			?> 
+			
+			.site-header {
+				text-align: center;
 			}
-		<?php endif; ?>	
+
+			.custom-logo-link, .menu {
+				display: inline-block;
+				text-align: center;
+			}
+
+			.custom-logo-link {
+				vertical-align: middle;
+			}
+			
+			img.custom-logo {
+				height: 120px;
+			}
+			
+			<?php endif; ?>	
 			
 		</style>
 		<?php

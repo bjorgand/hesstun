@@ -42,6 +42,30 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+h1 {
+	color: #086199;
+}
+
+h2 {
+	color: #0c8fe2;
+}
+
+h3 {
+	color: #45b1f5;
+}
+
+h4 {
+	color: #A5D6F6;
+}
+
+h5 {
+	color: #ebf6fd;
+}
+
+h6 {
+	color: white;
+}
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -642,7 +666,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #086199;
 }
 
 a:visited {

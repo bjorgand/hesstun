@@ -5,6 +5,19 @@ $color__darkgrey: #363839; //My version of black from the CC Library
 
 $color__bg: #FFF; //Backgrounds for elements
 
+$color__headlines:  $color__mainblue, 
+					lighten($color__mainblue, 15), 
+					lighten($color__mainblue, 30), 
+					$color__lightblue, 
+					lighten($color__lightblue, 15), 
+					lighten($color__lightblue, 30);
+
+@for $item from 1 through length($color__headlines) {
+	h#{$item} {
+		color: nth($color__headlines, $item);
+	}
+}
+
 
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
@@ -16,7 +29,7 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
+$color__link: $color__mainblue;
 $color__link-visited: purple;
 $color__link-hover: midnightblue;
 $color__text-main: #404040;

@@ -151,6 +151,22 @@ function hesstun_content_width() {
 add_action( 'after_setup_theme', 'hesstun_content_width', 0 );
 
 /**
+ * Function to allow me to use SVG in WordPress
+ *
+ * Code snippet fetched from: https://themeisle.com/blog/add-svg-to-wordpress/
+ */
+
+function add_file_types_to_uploads($file_types){
+	$new_filetypes = array();
+	$new_filetypes['svg'] = 'image/svg+xml';
+	$file_types = array_merge($file_types, $new_filetypes );
+	
+	return $file_types;
+}
+add_action('upload_mimes', 'add_file_types_to_uploads');
+
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
