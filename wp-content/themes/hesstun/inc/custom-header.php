@@ -19,7 +19,7 @@
  */
 function hesstun_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'hesstun_custom_header_args', array(
-		'default-image'          => get_template_directory_uri() . '../images/logo.png',
+		'default-image'          => '',
 		'default-text-color'     => 'ffffff',
 		'width'                  => 1000,
 		'height'                 => 250,
@@ -76,11 +76,13 @@ if ( ! function_exists( 'hesstun_header_style' ) ) :
 			
 			.site-header {
 				text-align: center;
+				background-color: transparent;
 			}
 
-			.custom-logo-link, .menu {
+			.custom-logo-link, .main-navigation ul {
 				display: inline-block;
 				text-align: center;
+				justify-content: center;
 			}
 
 			.custom-logo-link {

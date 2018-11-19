@@ -14,6 +14,17 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+		
+		<nav id="secondary-navigation" class="footer-navigation">
+			<button class="menu-toggle" aria-controls="secondary-menu" aria-expanded="false"><?php esc_html_e( 'Header', 'hesstun' ); ?></button>
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'menu-2',
+				'menu_id'        => 'Footer',
+			) );
+			?>
+		</nav><!-- #site-navigation -->
+		
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'hesstun' ) ); ?>">
 				<?php
