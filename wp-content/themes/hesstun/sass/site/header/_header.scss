@@ -14,13 +14,15 @@
 }
 
 .site-branding {
-	min-height: 80px;	
+	min-height: 80px;
+    display: flex;
+/*    flex: 1 auto;*/
 }
 
 .custom-logo-link {
 	
 	img {
-		display: inline-block;
+		display: flex;
 		height: 80px;
 		width: auto;
 	}
@@ -33,11 +35,16 @@
 	}
 	
 	.site-branding {
-		width: 40%;
-		flex: 1 0 auto;
+        width: 25%;
+        flex: 1 auto;
 	}
 	
 	.site-navigation {
 		width: 55%;
 	}
 }
+
+/*
+Header Menu
+*/
+@import "header-menu"

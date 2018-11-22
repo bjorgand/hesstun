@@ -71,6 +71,7 @@ if ( ! function_exists( 'hesstun_header_style' ) ) :
 			
 		<?php 
 		// Are we on the front page?
+        // If so, then we apply the layout for the front page custom header
 		if (is_front_page() ) : 
 			?> 
 			
@@ -78,10 +79,18 @@ if ( ! function_exists( 'hesstun_header_style' ) ) :
 				text-align: center;
 				background-color: transparent;
 			}
+            
+            .site-branding {
+                display: inline-block;
+                width: 30%;
+            }
 
+            .custom-logo-link img {
+                display: inline-block;
+            }
+            
 			.custom-logo-link, .main-navigation ul {
-				display: inline-block;
-				text-align: center;
+                text-align: center;
 				justify-content: center;
 			}
 
