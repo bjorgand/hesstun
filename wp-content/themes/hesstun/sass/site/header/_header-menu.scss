@@ -1,5 +1,5 @@
 .main-navigation {
-	display: flex;
+	display: block;
 	
 	font-family: $font__sans;
 	font-weight: 400;
@@ -8,12 +8,11 @@
 	clear: left;
 	
 	ul {
+     	display: none;       
 		list-style: none;
 		margin: 0;
 		padding-top: 1em;
 		padding-left: 0;
-        
-        justify-content: flex-end;
 
 		ul {
 			display: none;
@@ -34,23 +33,23 @@
 			}
 
 			a {
-				width: 125px;
+				width: 200px;  
 			}
 		}
 
 		li:hover > ul,
 		li.focus > ul {
 			left: auto;
-            font-weight: 700;
 		}
 	}
 
 	li {
 		position: relative;
+        margin-left: .25em;
 	}
 
 	a {
-		display: block;
+		display: inline-block;
 		width: 100%;
 		padding: .5em 0.75em .5em 0;
 		text-decoration: none;
@@ -58,6 +57,13 @@
         border-radius: 15px;
 	}
 	
+    a:hover,
+	a:focus,
+    a:hover button,
+    a:focus button {
+        font-weight: 900;
+	}
+    
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
@@ -79,17 +85,17 @@
 button.dropdown-toggle {
 	position: absolute;
 	right: 0;
-	border: none;
+	border: none;  
 	background: inherit;
-	color: white;
-	line-height: 1.5em;
-	padding: .4em 1em .4em .5em;
+	color: $color__mainblue;
+	line-height: 1.3em;
+	padding: .4em 1em .4em 0em;
 }
 
 .menu-toggle {
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 10px;
+	right: 10px;
 	display: block;
 	margin: 1.2em 1.2em 0 0;
 	padding: .6em .8em;
@@ -98,6 +104,7 @@ button.dropdown-toggle {
 	color: white;
 	border: 1px solid hsla(0, 0%, 100%, .3);
 }
+
 
 /* Toggle small menu and sub-menus on */
 .toggled-on ul,
@@ -111,34 +118,35 @@ button.dropdown-toggle {
 	}
 	
 	.main-navigation {
-		
+        
 		.menu-item-has-children > a,
 		.page_item_has_children > a {
-			padding-right: 2em;
-			background: hsla(0, 0%, 100%, .2);
+            padding-right: 0;		
+            background-color: $color__lightblue;
 		}
 		
 		ul {
-			display: flex;
+            display: flex;            
 			flex-wrap: wrap;
-			
+         
 			ul {
 				flex-direction: column;
 				background: hsla(0, 0%, 100%, .2);
 				margin-left: 0;
+                justify-content: flex-end;                   
 
 				li {
 					padding-left: 0;
 					
 					a {
-						width: 200px;
-						background: none;
+			/*			width: 200px;*/
+				        background: none;
+                        margin-left: 0.2em;                      
 					}
 				}
 			}
 			
 			li {
-					
 				a {
 					padding: .4em 1em; 
 				}

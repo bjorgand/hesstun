@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer">
 		
 		<nav id="secondary-navigation" class="footer-navigation">
-			<button class="menu-toggle" aria-controls="secondary-menu" aria-expanded="false"><?php esc_html_e( 'Header', 'hesstun' ); ?></button>
+			<button class="menu-toggle" aria-controls="secondary-menu" aria-expanded="false"><?php esc_html_e( 'Footer', 'hesstun' ); ?></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-2',
