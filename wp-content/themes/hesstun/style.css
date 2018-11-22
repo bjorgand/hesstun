@@ -66,6 +66,7 @@ h6 {
 	color: white;
 }
 
+/*$size__site-sidebar: 25%;*/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -848,9 +849,9 @@ a:hover, a:active {
 	min-height: 80px;
 	display: -ms-flexbox;
 	display: flex;
-	-ms-flex: 1 auto;
-	    flex: 1 auto;
-	width: 22%;
+	-ms-flex: 1 3;
+	    flex: 1 3;
+	width: 25%;
 }
 
 .custom-logo-link img {
@@ -903,7 +904,7 @@ Header Menu
 }
 
 .main-navigation ul ul a {
-	width: auto;
+	width: 200px;
 }
 
 .main-navigation ul li:hover > ul,
@@ -913,6 +914,7 @@ Header Menu
 
 .main-navigation li {
 	position: relative;
+	margin-left: .25em;
 }
 
 .main-navigation a {
@@ -946,7 +948,7 @@ Header Menu
 
 .main-navigation .menu-item-has-children > a,
 .main-navigation .page_item_has_children > a {
-	padding-right: 2em;
+	padding-right: 0.75em;
 }
 
 button.dropdown-toggle {
@@ -978,6 +980,32 @@ button.dropdown-toggle {
 	display: block;
 }
 
+@media screen and (max-width: 600px) {
+	.site-header {
+		text-align: center;
+	}
+	.site-branding {
+		display: block;
+		width: 100%;
+	}
+	.main-navigation {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 600px) and (min-width: 600px) {
+	.menu-item-has-children {
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	img.custom-logo {
+		height: 120px;
+	}
+}
+
 @media screen and (min-width: 600px) {
 	.menu-toggle {
 		display: none;
@@ -1005,8 +1033,8 @@ button.dropdown-toggle {
 		padding-left: 0;
 	}
 	.main-navigation ul ul li a {
-		/*			width: 200px;*/
 		background: none;
+		margin-left: 0.2em;
 	}
 	.main-navigation ul li a {
 		padding: .4em 1em;
@@ -1015,7 +1043,7 @@ button.dropdown-toggle {
 
 @media screen and (min-width: 1000px) {
 	.main-navigation {
-		font-size: 0.9em;
+		font-size: 0.85em;
 	}
 	.main-navigation ul {
 		-ms-flex-pack: end;
@@ -1060,6 +1088,51 @@ button.dropdown-toggle {
 
 .bypostauthor {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+.site-footer {
+	position: relative;
+	background-color: #363839;
+	color: #FFF;
+	text-align: center;
+	padding: 1em;
+}
+
+.site-footer a {
+	color: #FFF;
+}
+
+@media screen and (min-width: 600px) {
+	.site-footer {
+		padding: 1em 2em;
+	}
+}
+
+.menu-sosiale-medier-container ul {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	list-style-type: none;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-sosiale-medier-container ul a {
+	-ms-flex: 1 0 21%;
+	    flex: 1 0 21%;
+	display: block;
+	padding: .5em 1em;
+	color: #FFF;
+}
+
+.menu-sosiale-medier-container ul a:hover, .menu-sosiale-medier-container ul a:focus {
+	text-decoration: underline;
 }
 
 /*--------------------------------------------------------------

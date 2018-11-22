@@ -90,6 +90,12 @@ if ( ! function_exists( 'hesstun_header_style' ) ) :
                 margin: 0 auto;
 			}
             
+            @media screen and (min-width: 600px) {
+                .menu-item-has-children {
+                    text-align: left;
+                }
+            }
+            
 			img.custom-logo {
 				height: 120px;
 			}

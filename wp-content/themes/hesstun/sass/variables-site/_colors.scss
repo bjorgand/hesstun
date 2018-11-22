@@ -4,6 +4,8 @@ $color__darkblue: #024665; //Dark blue from the CC Library
 $color__darkgrey: #363839; //My version of black from the CC Library
 
 $color__bg: #FFF; //Backgrounds for elements
+$color__bg-footer: $color__bg;
+
 
 $color__headlines:  $color__mainblue, 
 					lighten($color__mainblue, 15), 

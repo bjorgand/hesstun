@@ -1,15 +1,41 @@
 .site-footer {
+    position: relative;
     background-color: $color__darkgrey;
-    color: $color__bg;
+    color: $color__bg-footer;
+
+    text-align: center;
+    padding: 1em;
     
-    font-size: 20em;
+    a {
+        color: $color__bg-footer;  
+    }
+    
+    @media screen and (min-width: $query__small) {
+		padding: 1em 2em;
+	}
 }
 
-
-
-/*
-Footer Menu
-*/
-@import "footer-menu"
-
+.menu-sosiale-medier-container {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        
+        a {
+            flex: 1 0 21%;
+            
+            display: block;
+            padding: .5em 1em;
+            color: $color__bg-footer;
+            
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+}
 
