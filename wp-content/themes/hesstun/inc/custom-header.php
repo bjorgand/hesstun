@@ -81,23 +81,15 @@ if ( ! function_exists( 'hesstun_header_style' ) ) :
 			}
             
             .site-branding {
-                display: inline-block;
-                width: 30%;
-            }
-
-            .custom-logo-link img {
-                display: inline-block;
+                display: block;
+                width: 100%;
             }
             
-			.custom-logo-link, .main-navigation ul {
-                text-align: center;
-				justify-content: center;
+            .main-navigation {
+                display: block;
+                margin: 0 auto;
 			}
-
-			.custom-logo-link {
-				vertical-align: middle;
-			}
-			
+            
 			img.custom-logo {
 				height: 120px;
 			}

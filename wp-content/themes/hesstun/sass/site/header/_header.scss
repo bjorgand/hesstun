@@ -1,6 +1,6 @@
 .site-header {
 	position: relative;
-	padding: 1em;
+	padding: 1.5em 1em 0.25em;
 	font-family: $font__sans;
 	color: $color__mainblue;
 	background-color: $color__bg;
@@ -9,35 +9,28 @@
 	flex-wrap: wrap;
 	
 	@media screen and (min-width: $query__small) {
-		padding: 1em 2em;
+		padding: 1.5em 2em 0.5em;
 	}
+    
+    justify-content: space-between;
 }
 
 .site-branding {
 	min-height: 80px;
     display: flex;
-/*    flex: 1 auto;*/
+    flex: 1 auto;   
+    width: 12em;    
 }
 
 .custom-logo-link {
 	
 	img {
-		display: flex;
 		height: 80px;
 		width: auto;
 	}
 }
 
 @media screen and (min-width: $query__medium) {
-	.site-header {
-		display: flex;
-		justify-content: space-between;
-	}
-	
-	.site-branding {
-        width: 25%;
-        flex: 1 auto;
-	}
 	
 	.site-navigation {
 		width: 55%;

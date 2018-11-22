@@ -713,35 +713,28 @@ a {
 --------------------------------------------------------------*/
 .site-header {
   position: relative;
-  padding: 1em;
+  padding: 1.5em 1em 0.25em;
   font-family: "Open Sans", "arial", "Lucida Sans", "Segoe UI", "Tahoma", sans-serif;
   color: #086199;
   background-color: #FFF;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: space-between; }
   @media screen and (min-width: 600px) {
     .site-header {
-      padding: 1em 2em; } }
+      padding: 1.5em 2em 0.5em; } }
 
 .site-branding {
   min-height: 80px;
   display: flex;
-  /*    flex: 1 auto;*/ }
+  flex: 1 auto;
+  width: 12em; }
 
 .custom-logo-link img {
-  display: flex;
   height: 80px;
   width: auto; }
 
-@media screen and (min-width: 900px) {
-  .site-header {
-    display: flex;
-    justify-content: space-between; }
-
-  .site-branding {
-    width: 25%;
-    flex: 1 auto; }
-
+@media screen and (min-width: 1000px) {
   .site-navigation {
     width: 55%; } }
 /*
@@ -751,13 +744,14 @@ Header Menu
   display: flex;
   font-family: "Open Sans", "arial", "Lucida Sans", "Segoe UI", "Tahoma", sans-serif;
   font-weight: 400;
+  font-size: 0.85em;
   clear: left; }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
-    padding-top: 2em;
-    padding-left: 0; }
+    padding-top: 1em;
+    padding-left: 0;
+    justify-content: flex-end; }
     .main-navigation ul ul {
       display: none;
       top: 1.5em;
@@ -831,7 +825,6 @@ button.dropdown-toggle {
     padding-right: 2em;
     background: rgba(255, 255, 255, 0.2); }
   .main-navigation ul {
-    display: block;
     display: flex;
     flex-wrap: wrap; }
     .main-navigation ul ul {
@@ -845,10 +838,12 @@ button.dropdown-toggle {
           background: none; }
     .main-navigation ul li a {
       padding: .4em 1em; } }
-@media screen and (min-width: 900px) {
-  .main-navigation ul {
-    justify-content: flex-end;
-    padding-top: 1em; } }
+@media screen and (min-width: 1000px) {
+  .main-navigation {
+    font-size: 0.9em; }
+    .main-navigation ul {
+      justify-content: flex-end;
+      padding-top: 1em; } }
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
