@@ -874,6 +874,11 @@ button.dropdown-toggle {
 .sticky {
   display: block; }
 
+.home {
+  background-image: url(../images/index_test.jpg);
+  background-position: center center;
+  background-repeat: no-repeat; }
+
 .post,
 .page {
   margin: 0 0 1.5em; }

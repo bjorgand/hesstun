@@ -52,4 +52,5 @@ function hesstun_customize_partial_blogdescription() {
 function hesstun_customize_preview_js() {
 	wp_enqueue_script( 'hesstun-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
+
 add_action( 'customize_preview_init', 'hesstun_customize_preview_js' );

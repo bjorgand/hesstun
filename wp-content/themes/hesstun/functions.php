@@ -61,11 +61,15 @@ if ( ! function_exists( 'hesstun_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'hesstun_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
+		add_theme_support( 'custom-background', apply_filters( 'hesstun_custom_background_args', 
+            array(
+			     'default-color' => 'ffffff',
+			     'default-image' => '',
+                 'home-image' => '',
 		) ) );
 
+        
+        
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -192,8 +196,13 @@ function hesstun_scripts() {
 
 	wp_enqueue_style( 'hesstun-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'hesstun-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+    // Enqueues my javascripts
+    
+	wp_enqueue_script( 'hesstun-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20181122', true );
 
+	wp_enqueue_script( 'hesstun-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20181123', true );    
+    
+    // Connecting the navigation with the Screen reader text
 	wp_localize_script( 'hesstun-navigation', 'hesstunScreenReaderText', array(
 		'expand' => __( 'Expand child menu', 'hesstun'),
 		'collapse' => __( 'Collapse child menu', 'hesstun'),

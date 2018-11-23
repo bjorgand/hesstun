@@ -6,13 +6,14 @@ $color__darkgrey: #363839; //My version of black from the CC Library
 $color__bg: #FFF; //Backgrounds for elements
 $color__bg-footer: $color__bg;
 
+$color__interactive: $color__darkblue;
 
-$color__headlines:  $color__mainblue, 
-					lighten($color__mainblue, 15), 
-					lighten($color__mainblue, 30), 
-					$color__lightblue, 
-					lighten($color__lightblue, 15), 
-					lighten($color__lightblue, 30);
+$color__headlines:  $color__darkblue,
+					lighten($color__darkblue, 1), 
+                    lighten($color__darkblue, 2),
+					lighten($color__darkblue, 3),  
+					lighten($color__darkblue, 4),
+                    lighten($color__darkblue, 5);
 
 @for $item from 1 through length($color__headlines) {
 	h#{$item} {
@@ -27,13 +28,13 @@ $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
-$color__text-screen: #21759b;
+$color__text-screen: $color__darkgrey;
 $color__text-input: #666;
 $color__text-input-focus: #111;
 $color__link: $color__mainblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
-$color__text-main: #404040;
+$color__link-visited: $color__lightblue;
+$color__link-hover: $color__mainblue;
+$color__text-main: $color__darkgrey;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;

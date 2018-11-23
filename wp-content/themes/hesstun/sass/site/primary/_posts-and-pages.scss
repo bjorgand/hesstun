@@ -2,13 +2,58 @@
 	display: block;
 }
 
-.post,
-.page {
+.hentry {
 	margin: 0 0 1.5em;
 }
 
-.updated:not(.published) {
+.entry-title {
+	margin: .125em 0 .25em;
+	font-size: 2.5em;
+	
+	@media screen and (min-width: $query__medium) {
+		font-size: 3em;
+	}
+}
+
+.entry-meta {
+	font-size: 85%;
+	
+	a {
+		font-weight: 700;
+		text-decoration: none;
+		color: $color__darkgrey;
+		
+		&:focus,
+		&:hover {
+			color: $color__interactive;
+			border-bottom: 2px solid $color__interactive;
+		}
+	}
+}
+
+.byline {
+	&::after {
+		content: "|";
+		margin: 0 .5em;
+	}
+}
+
+.comments-link,
+.edit-link {
+	&::before {
+		content: "|";
+		margin: 0 .5em;
+	}
+}
+
+.byline,
+.updated:not(.published){
 	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
 }
 
 .page-content,
@@ -20,4 +65,8 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.type-post {
+    background-color: $color__bg;
 }

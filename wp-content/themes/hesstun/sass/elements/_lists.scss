@@ -1,9 +1,9 @@
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em;
 }
 
 ul {
-	list-style: disc;
+	list-style: circle;
 }
 
 ol {
@@ -13,11 +13,11 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: .5em;
 }
 
 dt {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 dd {

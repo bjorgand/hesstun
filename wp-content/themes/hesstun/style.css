@@ -43,27 +43,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 h1 {
-	color: #086199;
+	color: #024665;
 }
 
 h2 {
-	color: #0c8fe2;
+	color: #02496a;
 }
 
 h3 {
-	color: #45b1f5;
+	color: #024d6f;
 }
 
 h4 {
-	color: #A5D6F6;
+	color: #025074;
 }
 
 h5 {
-	color: #ebf6fd;
+	color: #025479;
 }
 
 h6 {
-	color: white;
+	color: #02577e;
 }
 
 /*$size__site-sidebar: 25%;*/
@@ -411,7 +411,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
+	color: #363839;
 	font-family: "Open Sans", "arial", "Lucida Sans", "Segoe UI", "Tahoma", sans-serif;
 	font-size: 18px;
 	font-size: 1.125rem;
@@ -468,7 +468,23 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	position: relative;
+	margin: 0 0 1em;
+	background: #A5D6F6;
+	color: #024665;
+	padding: 1em 2em .5em 5em;
+	font-style: italic;
+}
+
+blockquote:before {
+	position: absolute;
+	top: -.2em;
+	left: -.13em;
+	content: "“";
+	font-family: "Open Sans", "arial", "Lucida Sans", "Segoe UI", "Tahoma", sans-serif;
+	font-size: 12em;
+	line-height: 100%;
+	color: white;
 }
 
 address {
@@ -522,15 +538,12 @@ html {
 }
 
 body {
-	background: #fff;
+	background: #FFF;
 	/* Fallback for when there is no custom background color defined. */
 }
 
-hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+blockquote, q {
+	quotes: "" "";
 }
 
 ul, ol {
@@ -567,13 +580,47 @@ img {
 }
 
 figure {
-	margin: 1em 0;
+	margin: 0;
 	/* Extra wide images within figure tags don't overflow the content area. */
 }
 
 table {
+	border-collapse: collapse;
 	margin: 0 0 1.5em;
 	width: 100%;
+}
+
+thread th {
+	border-bottom: 2px solid #bbb;
+	padding-bottom: .5em;
+}
+
+td,
+th {
+	vertical-align: top;
+}
+
+th {
+	padding: .4em;
+	text-align: left;
+}
+
+tr {
+	border-bottom: 1px solid #eee;
+}
+
+td {
+	padding: .4em;
+}
+
+th:first-child,
+td:first-child {
+	padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+	padding-right: 0;
 }
 
 /*--------------------------------------------------------------
@@ -665,16 +712,16 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #086199;
+	color: #024665;
 	text-decoration: none;
 }
 
 a:visited {
-	color: purple;
+	color: #A5D6F6;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: #086199;
 }
 
 a:focus {
@@ -683,6 +730,24 @@ a:focus {
 
 a:hover, a:active {
 	outline: 0;
+}
+
+.page-content a,
+.entry-content a,
+.entry-summary a,
+.comment-content a {
+	text-decoration: none;
+	border-bottom: 2px solid #024665;
+}
+
+.page-content a:focus, .page-content a:hover,
+.entry-content a:focus,
+.entry-content a:hover,
+.entry-summary a:focus,
+.entry-summary a:hover,
+.comment-content a:focus,
+.comment-content a:hover {
+	color: #024665;
 }
 
 /*--------------------------------------------------------------
@@ -736,7 +801,7 @@ a:hover, a:active {
 	clip: auto !important;
 	-webkit-clip-path: none;
 	        clip-path: none;
-	color: #21759b;
+	color: #363839;
 	display: block;
 	font-size: 17.5px;
 	font-size: 1.09375rem;
@@ -1059,13 +1124,55 @@ button.dropdown-toggle {
 	display: block;
 }
 
-.post,
-.page {
+.hentry {
 	margin: 0 0 1.5em;
 }
 
+.entry-title {
+	margin: .125em 0 .25em;
+	font-size: 2.5em;
+}
+
+@media screen and (min-width: 1000px) {
+	.entry-title {
+		font-size: 3em;
+	}
+}
+
+.entry-meta {
+	font-size: 85%;
+}
+
+.entry-meta a {
+	font-weight: 700;
+	text-decoration: none;
+	color: #363839;
+}
+
+.entry-meta a:focus, .entry-meta a:hover {
+	color: #024665;
+	border-bottom: 2px solid #024665;
+}
+
+.byline::after {
+	content: "|";
+	margin: 0 .5em;
+}
+
+.comments-link::before,
+.edit-link::before {
+	content: "|";
+	margin: 0 .5em;
+}
+
+.byline,
 .updated:not(.published) {
 	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
 }
 
 .page-content,

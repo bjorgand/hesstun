@@ -74,8 +74,9 @@ if ( ! function_exists( 'hesstun_header_style' ) ) :
         // If so, then we apply the layout for the front page custom header
 		if (is_front_page() ) : 
 			?> 
-			
+                        
 			.site-header {
+                display: block;
 				text-align: center;
 				background-color: transparent;
 			}
@@ -89,6 +90,10 @@ if ( ! function_exists( 'hesstun_header_style' ) ) :
                 display: block;
                 margin: 0 auto;
 			}
+            
+            .main-navigation ul {
+                 justify-content: center;
+            }
             
             @media screen and (min-width: 600px) {
                 .menu-item-has-children {
