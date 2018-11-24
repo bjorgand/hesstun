@@ -16,7 +16,7 @@
             <?php $prevPost = get_previous_post(true);
                 if($prevPost) {?>
                     <div class="nav-box previous">
-                    <?php $prevthumbnail = get_the_post_thumbnail($prevPost->ID, array(100,100) );?>
+                    <?php $prevthumbnail = get_the_post_thumbnail($prevPost->ID, array(180,180) );?>
                     <?php previous_post_link('%link',"$prevthumbnail  <p>%title</p>", TRUE); ?>
                     </div>
             <?php } ?>
@@ -70,8 +70,8 @@
         <div class="post-navigation">
              <?php $nextPost = get_next_post(true);
                 if($nextPost) { ?>
-                <div class="nav-box next" style="float:right;">
-                        <?php $nextthumbnail = get_the_post_thumbnail($nextPost->ID, array(100,100) );?>
+                <div class="nav-box next">
+                        <?php $nextthumbnail = get_the_post_thumbnail($nextPost->ID, array(180,180) );?>
                     <?php next_post_link('%link',"$nextthumbnail  <p>%title</p>", TRUE); ?>
                 </div>
             <?php } ?>

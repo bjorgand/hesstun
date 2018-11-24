@@ -73,11 +73,11 @@ if ( ! function_exists( 'hesstun_entry_footer' ) ) :
             // TO DO: Thinking of adding the plugin  easy category icons to add symbols next to them 
             
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'hesstun' ) );
-			if ( $categories_list ) {
+			//$categories_list = get_the_category_list( esc_html__( ', ', 'hesstun' ) );
+			//if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( '%1$s', 'hesstun' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
+			//	printf( '<span class="cat-links">' . esc_html__( '%1$s', 'hesstun' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			//}
 
 			/* translators: used between list items, there is a space after the comma */
 			//$tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'hesstun' ) );
@@ -85,25 +85,6 @@ if ( ! function_exists( 'hesstun_entry_footer' ) ) :
 				/* translators: 1: list of tags. */
 			//	printf( '<span class="tags-links">' . esc_html__( '%1$s', 'hesstun' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			//}
-		}
-
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: post title */
-						__( 'Legg igjen en kommentar<span class="screen-reader-text"> on %s</span>', 'hesstun' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
-			echo '</span>';
 		}
 	}
 
@@ -159,23 +140,3 @@ function hesstun_post_navigation() {
 			'<span class="post-title">%title</span>',
 	) );
 }
-
-/**
- * Post navigation (previous / next post) for single posts, where the navigation is split up on
- * on each side of the actual post content … Please work.
- */
-
-/** function hesstun_post_navigation_left() {
-    
-    previous_post_link('Previous post: %link', '[ %title ]');
-    
-}
-
-function hesstun_post_navigation_right() {
-    
-    
-    next_post_link('Next post: %link', '[ %title ]');
-    
-}
-*/
-

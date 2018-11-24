@@ -29,6 +29,21 @@
 			border-bottom: 2px solid $color__interactive;
 		}
 	}
+    
+    @media screen and (max-width: $query__small) {
+        font-size: 90%;
+        
+        .byline,
+        .posted-on {
+            display: block;
+        }
+        
+        .byline {
+            &::after {
+                content: "";
+            }
+        }
+    }
 }
 
 .byline {
@@ -69,16 +84,42 @@
 
 section.post-content {
     background-color: $color__bg;
-    padding: 2em;
-    border-radius: 20px;
+    padding: 1.75em;
+    border-radius: 30px;
     
     img {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
+        color: white;
+    }
+    
+    .entry-content img {
+        border-radius: 0;
+    }
+    
+    p:last-child {
+        margin-bottom: 0;
     }
 }
 
 div.post-navigation {
-    background-color: $color__bg;
     display: inline-block;
+        
+    p {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: $query__medium) {
+    div.post-navigation {
+        display: none;
+        flex: none;
+    }
+}
+
+@media screen and (min-width: $query__medium) {
+    .navigation {
+        display: none;
+    }
 }
