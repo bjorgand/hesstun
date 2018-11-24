@@ -17,7 +17,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', get_post_type() );
+			get_template_part( 'template-parts/content', 'single' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -25,13 +25,15 @@ get_header();
 			endif;
             
             hesstun_post_navigation();
-
+            
 		endwhile; // End of the loop.
 		?>
-
+            
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
+// Not planning on using the sidebar menu at all, but will see…
+//get_sidebar();
 get_footer();

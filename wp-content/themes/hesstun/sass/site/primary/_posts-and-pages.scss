@@ -67,6 +67,18 @@
 	margin: 0 0 1.5em;
 }
 
-.type-post {
+section.post-content {
     background-color: $color__bg;
+    padding: 2em;
+    border-radius: 20px;
+    
+    img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+}
+
+div.post-navigation {
+    background-color: $color__bg;
+    display: inline-block;
 }

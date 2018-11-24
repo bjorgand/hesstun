@@ -36,5 +36,6 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+// Not planning on using the sidebar, but will see…
+// get_sidebar();
 get_footer();

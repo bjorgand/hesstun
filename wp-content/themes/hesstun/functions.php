@@ -174,6 +174,10 @@ add_action('upload_mimes', 'add_file_types_to_uploads');
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
+
+// Not sure if i want to use this option
+
+/**
 function hesstun_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'hesstun' ),
@@ -186,6 +190,7 @@ function hesstun_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'hesstun_widgets_init' );
+*/
 
 /**
  * Enqueue scripts and styles.

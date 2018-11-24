@@ -149,7 +149,8 @@ endif;
  * Post navigation (previous / next post) for single posts.
  */
 function hesstun_post_navigation() {
-	the_post_navigation( array(
+
+    the_post_navigation( array(
 		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Neste', 'hesstun' ) . '</span> ' .
 			'<span class="screen-reader-text">' . __( 'Neste innlegg:', 'hesstun' ) . '</span> ' .
 			'<span class="post-title">%title</span>',
@@ -158,3 +159,23 @@ function hesstun_post_navigation() {
 			'<span class="post-title">%title</span>',
 	) );
 }
+
+/**
+ * Post navigation (previous / next post) for single posts, where the navigation is split up on
+ * on each side of the actual post content … Please work.
+ */
+
+/** function hesstun_post_navigation_left() {
+    
+    previous_post_link('Previous post: %link', '[ %title ]');
+    
+}
+
+function hesstun_post_navigation_right() {
+    
+    
+    next_post_link('Next post: %link', '[ %title ]');
+    
+}
+*/
+

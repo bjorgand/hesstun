@@ -6,3 +6,31 @@
 	}
 }
 
+.site-coontent {
+    max-width: $size__max-width;
+    margin: 0 auto;
+}
+
+/*@media screen and (min-width: $query__small) {*/
+
+    .post-content__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    div.post-navigation {
+        display: inline-block;
+        background: white;
+        padding: 1em;
+        border-radius: 10px;
+        
+        img {
+             border-radius: 10px;
+        }
+    }
+
+    .post-content {
+        width: $size__ratio-large;
+    }
+/*}*/
