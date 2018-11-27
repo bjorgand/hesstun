@@ -151,7 +151,22 @@ function hesstun_content_width() {
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 	$GLOBALS['content_width'] = apply_filters( 'hesstun_content_width', 640 );
 }
+
 add_action( 'after_setup_theme', 'hesstun_content_width', 0 );
+
+/**
+ * Remove Paragraph Tags From Around Images
+ *
+ * Snippet from https://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/
+ *
+ * Written by Justin W Hall
+ */
+
+function filter_ptags_on_images($content){
+   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+
+add_filter('the_content', 'filter_ptags_on_images');
 
 /**
  * Function to allow me to use SVG in WordPress
@@ -247,4 +262,9 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Load SVG icon functions.
+ */
+require get_template_directory() . '/inc/icon-functions.php';
 

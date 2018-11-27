@@ -132,10 +132,10 @@ endif;
 function hesstun_post_navigation() {
 
     the_post_navigation( array(
-		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Neste', 'hesstun' ) . '</span> ' .
+		'next_text' => '<span class="meta-nav" aria-hidden="true">'. __( 'Neste', 'hesstun' ) . '</span> ' .
 			'<span class="screen-reader-text">' . __( 'Neste innlegg:', 'hesstun' ) . '</span> ' .
-			'<span class="post-title">%title</span>',
-		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Forrige', 'hesstun' ) . '</span> ' .
+			'<span class="post-title">%title</span>' . hesstun_get_svg( array( 'icon' => 'arrow-right') ) ,
+		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . hesstun_get_svg( array( 'icon' => 'arrow-left') ) . __( 'Forrige', 'hesstun' ) . '</span> ' .
 			'<span class="screen-reader-text">' . __( 'Forrige innlegg:', 'hesstun' ) . '</span> ' .
 			'<span class="post-title">%title</span>',
 	) );

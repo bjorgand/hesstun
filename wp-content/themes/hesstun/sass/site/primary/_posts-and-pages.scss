@@ -123,3 +123,311 @@ div.post-navigation {
         display: none;
     }
 }
+
+/* Sizing up the content-area for the different screen sizes */
+
+.page.entry-content {
+    width: $size__ratio-large;
+    
+    @media screen and (min-width: $query__small){
+        width: $size__ratio-small;
+    }
+}
+
+.home h1 {
+    background-color: $color__bg;
+    padding: .5em .5em 0;
+    margin: 0 auto;
+    
+    &:first-of-type {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
+.home p {
+    background-color: $color__bg;
+    margin: 0 auto;
+    padding: .25em 2em;
+    
+    &:last-of-type {
+        padding-bottom: 2em;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    
+    @media screen and (min-width: $query__small){
+        padding: .5em 6em;
+        
+        &:last-of-type {
+            padding-bottom: 2.5em;
+        }
+    }
+    
+    img {
+        background-color: transparent; 
+        margin: 0;
+    }
+    
+    a figure {
+        
+        padding: 1em;
+        align-items: center;
+        
+        @media screen and (min-width: $query__small){
+            display: inline-block;
+        }
+    }
+        
+}
+
+// Galleri page, it got classes in the page in the code view in WordPress
+// Galleri has the page id 1517 
+
+.page-id-1517 div.entry-content {
+    
+    h2 {
+        display: none;
+    }
+    
+    p {
+        color: white;
+        text-align: center; 
+        padding: 1em 2em 0;
+        font-weight: 700;
+    }
+        
+    @media screen and (min-width: $query__small){
+        h2 {
+            color: white;
+            display: block;
+            text-align: center;  
+            padding: 0 0 .25em 0;
+            margin-top: -.25em;
+        }
+
+        p {
+            padding: 0;
+            
+            &:first-of-type {
+                margin-bottom: .25em;
+            }
+        }
+        
+    }
+    
+    // Working with Nextgen Gallery classes   
+    
+    div.ngg-albumoverview {
+        margin-top: 2.75em;
+    }
+        
+    // Making the post thumbnails for the albums
+    
+    .ngg-albumoverview.default-view .ngg-album-compact,
+    .ngg-albumcompact {
+        background-color: $color__bg;
+        padding: 1.75em;
+        border-radius: 30px;
+        box-shadow: none;
+    
+        img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            color: white;
+        }
+    }
+    
+    .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc {
+        font-size: 1.5em;
+    }
+    
+    // Making the post thumbnails for the albums that shows the individual galleries
+    
+    .ngg-albumoverview.default-view .ngg-album-compact,
+    .ngg-albumcompact {
+        background-color: $color__bg;
+        padding: 1.75em;
+        border-radius: 30px;
+        box-shadow: none;
+    
+        img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            color: white;
+        }
+    }
+    
+    .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc {
+        font-size: 1.5em;
+    }
+    
+    // Working on the gallery pages, edit the thumbnail view to display with flex
+    // without the captions and the background on each thumbnail
+    
+    div.ngg-galleryoverview {
+        background-color: $color__bg;
+        padding: .75em;
+        border-radius: 30px;
+        display: flex!important;
+        flex-wrap: wrap;
+        align-content: space-around;      
+    }
+    
+    .ngg-template-caption div.ngg-gallery-thumbnail {
+        background-color: transparent;   
+        border: none;
+        margin: 0;
+        
+        span {
+            display: none;
+        }  
+        
+        img {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-width: $query__small) {
+        
+        //Fixing the gallery to display better on mobile view i.e. full width
+        
+        .ngg-gallery-thumbnail-box {
+            width: 100%!important;
+        }
+        
+        a img {
+            padding-bottom: .5em;
+        }
+        
+        #ngg-image-1 a img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        } 
+    }
+    
+    @media screen and (min-width: $query__small){
+        
+        // Fixing the edges to fit the white box
+        // Now it only works for exactly 12 images… workaround for this somehow?
+        // And the gallery counts the images from 1 and up, so the first image in the
+        // schoolalbum is nr. 13. So be careful when adding new images, this list will need to be updated.
+
+        // Boat album
+        #ngg-image-1 a img {
+            border-top-left-radius: 20px;
+        } 
+        
+        #ngg-image-3 a img {
+            border-top-right-radius: 20px;
+        }
+        
+        #ngg-image-10 a img {
+            border-bottom-left-radius: 20px;
+        }
+        
+        #ngg-image-12 a img {
+            border-bottom-right-radius: 20px;
+        }  
+        // School album
+        #ngg-image-13 a img {
+            border-top-left-radius: 20px;
+        } 
+        
+        #ngg-image-15 a img {
+            border-top-right-radius: 20px;
+        }
+        
+        #ngg-image-22 a img {
+            border-bottom-left-radius: 20px;
+        }
+        
+        #ngg-image-24 a img {
+            border-bottom-right-radius: 20px;
+        } 
+    }
+
+    /* Cleaning up the overall margins / paddings */
+    ul.ngg-breadcrumbs,
+    .entry-content a {
+        padding-top: 0;
+        color: white;
+        font-size: .8em;
+        font-weight: 700;
+        letter-spacing: .1em;     
+    }
+}
+
+// Working on the captions in the lightbox
+
+div.sl-caption {
+ opacity: 0;
+}
+
+/* Changes the image container to only display captions on hover */ 
+.sl-image:hover .sl-caption,
+.sl-image:active .sl-caption {
+    opacity: 1;
+}
+
+// Web kamera page, it got classes in the page in the code view in WordPress
+// Web kamera has the page id 1519 
+
+.page-id-1519 div.entry-content {
+    
+    .web-kamera-column-1 {
+        padding: 1em 1em 0;
+        background-color: $color__bg;
+        border-radius: 15px 15px 0 0;
+        margin-bottom: 0;
+        
+        p:last-of-type {
+            padding-bottom: .15em;
+        }
+        
+        figcaption {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+    .web-kamera-column-2 {
+        background-color: $color__bg;
+        padding-top: 2em;
+        margin-top: -.5em;
+        
+        img {
+            padding: 0 .4em 0;
+        }
+    }
+    
+    @media screen and (min-width: $query__medium){
+        background-color: $color__bg;
+        border-radius: 15px 0 0 15px;        
+        display: flex;
+        align-items: center; 
+        align-content: center;        
+        width: 100%;
+        padding: 1em 0 1.5em 0;
+        
+        .web-kamera-column-1 {
+            background-color: transparent;
+            width: $size__ratio-small*2;
+            padding: 1.5em .5em 1.5em 2em;
+        }
+        .web-kamera-column-2 {
+            display: flex;
+            background-color: transparent;
+            width: $size__ratio-medium;
+            padding: 0;     
+            justify-content: center;
+        }
+        
+        .web-kamera-column-2 img {
+            height: 100%;
+            width: auto;
+            padding-left: 3em;
+        }
+    }
+}
+
+

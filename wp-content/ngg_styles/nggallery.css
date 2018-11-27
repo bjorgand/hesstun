@@ -1,0 +1,23 @@
+/*
+CSS Name: Default Styles
+Description: NextGEN Default Gallery Stylesheet
+Author: Imagely
+Version: 2.13
+
+This stylesheet is provided to allow users the ability of overriding the default styles for all display types
+*/
+
+/* adding my own main blue color to the elements in the lightbox */
+
+.sl-wrapper .sl-navigation button,
+.sl-wrapper .sl-close,
+.sl-wrapper .sl-counter {
+    color: #086199;
+}
+
+.sl-wrapper .sl-image .sl-caption {
+ background: rgba(2,69,100,.9);
+}
+
+
+

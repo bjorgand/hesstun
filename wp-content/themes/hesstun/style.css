@@ -5,7 +5,7 @@ Theme URI: http://github.com/bjorgand/hesstun/
 Author: Bjørg Helene Andorsen
 Author URI: http://bjorghelene.no/
 Description: A light and fresh theme based on the _s for the island Hamnøya in Nordland, Norway.
-Version: 1.0.0
+Version: 1.1.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: hesstun
@@ -1334,6 +1334,284 @@ div.post-navigation p {
 	}
 }
 
+/* Sizing up the content-area for the different screen sizes */
+.page.entry-content {
+	width: 90%;
+}
+
+@media screen and (min-width: 600px) {
+	.page.entry-content {
+		width: 19%;
+	}
+}
+
+.home h1 {
+	background-color: #FFF;
+	padding: .5em .5em 0;
+	margin: 0 auto;
+}
+
+.home h1:first-of-type {
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+.home p {
+	background-color: #FFF;
+	margin: 0 auto;
+	padding: .25em 2em;
+}
+
+.home p:last-of-type {
+	padding-bottom: 2em;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+@media screen and (min-width: 600px) {
+	.home p {
+		padding: .5em 6em;
+	}
+	.home p:last-of-type {
+		padding-bottom: 2.5em;
+	}
+}
+
+.home p img {
+	background-color: transparent;
+	margin: 0;
+}
+
+.home p a figure {
+	padding: 1em;
+	-ms-flex-align: center;
+	    align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+	.home p a figure {
+		display: inline-block;
+	}
+}
+
+.page-id-1517 div.entry-content {
+	/* Cleaning up the overall margins / paddings */
+}
+
+.page-id-1517 div.entry-content h2 {
+	display: none;
+}
+
+.page-id-1517 div.entry-content p {
+	color: white;
+	text-align: center;
+	padding: 1em 2em 0;
+	font-weight: 700;
+}
+
+@media screen and (min-width: 600px) {
+	.page-id-1517 div.entry-content h2 {
+		color: white;
+		display: block;
+		text-align: center;
+		padding: 0 0 .25em 0;
+		margin-top: -.25em;
+	}
+	.page-id-1517 div.entry-content p {
+		padding: 0;
+	}
+	.page-id-1517 div.entry-content p:first-of-type {
+		margin-bottom: .25em;
+	}
+}
+
+.page-id-1517 div.entry-content div.ngg-albumoverview {
+	margin-top: 2.75em;
+}
+
+.page-id-1517 div.entry-content .ngg-albumoverview.default-view .ngg-album-compact,
+.page-id-1517 div.entry-content .ngg-albumcompact {
+	background-color: #FFF;
+	padding: 1.75em;
+	border-radius: 30px;
+	box-shadow: none;
+}
+
+.page-id-1517 div.entry-content .ngg-albumoverview.default-view .ngg-album-compact img,
+.page-id-1517 div.entry-content .ngg-albumcompact img {
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	color: white;
+}
+
+.page-id-1517 div.entry-content .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc {
+	font-size: 1.5em;
+}
+
+.page-id-1517 div.entry-content .ngg-albumoverview.default-view .ngg-album-compact,
+.page-id-1517 div.entry-content .ngg-albumcompact {
+	background-color: #FFF;
+	padding: 1.75em;
+	border-radius: 30px;
+	box-shadow: none;
+}
+
+.page-id-1517 div.entry-content .ngg-albumoverview.default-view .ngg-album-compact img,
+.page-id-1517 div.entry-content .ngg-albumcompact img {
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	color: white;
+}
+
+.page-id-1517 div.entry-content .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc {
+	font-size: 1.5em;
+}
+
+.page-id-1517 div.entry-content div.ngg-galleryoverview {
+	background-color: #FFF;
+	padding: .75em;
+	border-radius: 30px;
+	display: -ms-flexbox !important;
+	display: flex !important;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-line-pack: distribute;
+	    align-content: space-around;
+}
+
+.page-id-1517 div.entry-content .ngg-template-caption div.ngg-gallery-thumbnail {
+	background-color: transparent;
+	border: none;
+	margin: 0;
+}
+
+.page-id-1517 div.entry-content .ngg-template-caption div.ngg-gallery-thumbnail span {
+	display: none;
+}
+
+.page-id-1517 div.entry-content .ngg-template-caption div.ngg-gallery-thumbnail img {
+	width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+	.page-id-1517 div.entry-content .ngg-gallery-thumbnail-box {
+		width: 100% !important;
+	}
+	.page-id-1517 div.entry-content a img {
+		padding-bottom: .5em;
+	}
+	.page-id-1517 div.entry-content #ngg-image-1 a img {
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.page-id-1517 div.entry-content #ngg-image-1 a img {
+		border-top-left-radius: 20px;
+	}
+	.page-id-1517 div.entry-content #ngg-image-3 a img {
+		border-top-right-radius: 20px;
+	}
+	.page-id-1517 div.entry-content #ngg-image-10 a img {
+		border-bottom-left-radius: 20px;
+	}
+	.page-id-1517 div.entry-content #ngg-image-12 a img {
+		border-bottom-right-radius: 20px;
+	}
+	.page-id-1517 div.entry-content #ngg-image-13 a img {
+		border-top-left-radius: 20px;
+	}
+	.page-id-1517 div.entry-content #ngg-image-15 a img {
+		border-top-right-radius: 20px;
+	}
+	.page-id-1517 div.entry-content #ngg-image-22 a img {
+		border-bottom-left-radius: 20px;
+	}
+	.page-id-1517 div.entry-content #ngg-image-24 a img {
+		border-bottom-right-radius: 20px;
+	}
+}
+
+.page-id-1517 div.entry-content ul.ngg-breadcrumbs,
+.page-id-1517 div.entry-content .entry-content a {
+	padding-top: 0;
+	color: white;
+	font-size: .8em;
+	font-weight: 700;
+	letter-spacing: .1em;
+}
+
+div.sl-caption {
+	opacity: 0;
+}
+
+/* Changes the image container to only display captions on hover */
+.sl-image:hover .sl-caption,
+.sl-image:active .sl-caption {
+	opacity: 1;
+}
+
+.page-id-1519 div.entry-content .web-kamera-column-1 {
+	padding: 1em 1em 0;
+	background-color: #FFF;
+	border-radius: 15px 15px 0 0;
+	margin-bottom: 0;
+}
+
+.page-id-1519 div.entry-content .web-kamera-column-1 p:last-of-type {
+	padding-bottom: .15em;
+}
+
+.page-id-1519 div.entry-content .web-kamera-column-1 figcaption {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.page-id-1519 div.entry-content .web-kamera-column-2 {
+	background-color: #FFF;
+	padding-top: 2em;
+	margin-top: -.5em;
+}
+
+.page-id-1519 div.entry-content .web-kamera-column-2 img {
+	padding: 0 .4em 0;
+}
+
+@media screen and (min-width: 1000px) {
+	.page-id-1519 div.entry-content {
+		background-color: #FFF;
+		border-radius: 15px 0 0 15px;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-align: center;
+		    align-items: center;
+		-ms-flex-line-pack: center;
+		    align-content: center;
+		width: 100%;
+		padding: 1em 0 1.5em 0;
+	}
+	.page-id-1519 div.entry-content .web-kamera-column-1 {
+		background-color: transparent;
+		width: 38%;
+		padding: 1.5em .5em 1.5em 2em;
+	}
+	.page-id-1519 div.entry-content .web-kamera-column-2 {
+		display: -ms-flexbox;
+		display: flex;
+		background-color: transparent;
+		width: 60%;
+		padding: 0;
+		-ms-flex-pack: center;
+		    justify-content: center;
+	}
+	.page-id-1519 div.entry-content .web-kamera-column-2 img {
+		height: 100%;
+		width: auto;
+		padding-left: 3em;
+	}
+}
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
@@ -1483,6 +1761,75 @@ object {
 	.centered-image {
 		margin: 0 -2em;
 	}
+}
+
+.transparent-image {
+	margin-bottom: -1em;
+}
+
+.home-thumbnails-centered {
+	background-color: #FFF;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	padding: 1em 4em 0;
+}
+
+@media screen and (min-width: 1000px) {
+	.home-thumbnails-centered {
+		padding: 2.5em 20% .25em;
+	}
+}
+
+.round-thumbnail {
+	border-radius: 50%;
+	margin: .5em;
+}
+
+/*--------------------------------------------------------------
+## Icons
+--------------------------------------------------------------*/
+/* SVG Icons base styles */
+.icon {
+	display: inline-block;
+	fill: #086199;
+	height: 1em;
+	position: relative;
+	/* Align more nicely with capital letters */
+	top: -0.0625em;
+	vertical-align: middle;
+	width: 1em;
+}
+
+/*--------------------------------------------------------------
+SVG Fallbacks
+--------------------------------------------------------------*/
+.svg-fallback {
+	display: none;
+}
+
+.no-svg .svg-fallback {
+	display: inline-block;
+}
+
+/* Social Menu fallbacks */
+.no-svg .social-menu a {
+	height: auto;
+	width: auto;
+}
+
+.no-svg .social-menu li a .screen-reader-text {
+	clip: auto;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: 400;
+	height: auto;
+	position: relative !important;
+	/* overrides previous !important styles */
+	width: auto;
 }
 
 /*--------------------------------------------------------------

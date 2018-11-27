@@ -7,3 +7,26 @@
 		margin: 0 -2em;
 	}
 }
+
+.transparent-image {
+    margin-bottom: -1em;
+}
+
+.home-thumbnails-centered {
+    background-color: $color__bg;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em 4em 0;
+    
+    @media screen and (min-width: $query__medium) {
+        padding: 2.5em 20% .25em;
+	}
+}
+
+.round-thumbnail {
+    border-radius: 50%;
+    margin: .5em;
+}
+
+
