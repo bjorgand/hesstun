@@ -1,18 +1,63 @@
 .site-footer {
     position: relative;
+    
     background-color: $color__darkgrey;
     color: $color__bg-footer;
 
     text-align: center;
-    padding: 1em;
+    padding: 1.5em;
+    font-size: .8em;    
     
-    a {
-        color: $color__bg-footer;  
+    p {
+        background-color: transparent;
     }
     
+    a {
+        color: $color__bg-footer;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline; 
+        }
+    }    
+    
+    .site-info,
+    .hamnoya-links,
+    .footer-navigation {
+        padding: 1.5em 0;
+    }
+     
+    // Skjule menyvalget for footer-menyen
+
+    button.menu-toggle {
+        display: none;
+    }
+    
+    // Tilpasse layout for større skjermer
+    
     @media screen and (min-width: $query__small) {
-		padding: 1em 2em;
+		padding: 1em 4em;
+        
+        .site-info {
+            padding: 2em 0 1em;
+        }
 	}
+}
+
+.hamnoya-links {
+    
+    a {
+        flex: 1 0 21%;
+
+        display: block;
+        padding: .5em 1em;
+        color: $color__bg-footer;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline; 
+        }
+    }    
 }
 
 .menu-sosiale-medier-container {
@@ -30,12 +75,14 @@
             display: block;
             padding: .5em 1em;
             color: $color__bg-footer;
-            
+                         
             &:hover,
             &:focus {
-                text-decoration: underline;
+                text-decoration: underline; 
             }
         }
     }
 }
+
+
 

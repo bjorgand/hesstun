@@ -1,40 +1,11 @@
 /* SVG Icons base styles */
 
-.icon {
+.icon svg {
 	display: inline-block;
-	fill: $color__mainblue;
-	height: 1em;
+	fill: $color__bg;
+	height: 5em;
 	position: relative; /* Align more nicely with capital letters */
 	top: -0.0625em;
 	vertical-align: middle;
-	width: 1em;
-}
-
-/*--------------------------------------------------------------
-SVG Fallbacks
---------------------------------------------------------------*/
-
-.svg-fallback {
-	display: none;
-}
-
-.no-svg .svg-fallback {
-	display: inline-block;
-}
-
-/* Social Menu fallbacks */
-
-.no-svg .social-menu a {
-	height: auto;
-	width: auto;
-}
-
-.no-svg .social-menu li a .screen-reader-text {
-	clip: auto;
-	font-size: 16px;
-	font-size: 1rem;
-	font-weight: 400;
-	height: auto;
-	position: relative !important; /* overrides previous !important styles */
-	width: auto;
+	width: 5em;
 }

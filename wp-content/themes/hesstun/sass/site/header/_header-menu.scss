@@ -45,7 +45,7 @@
 
 	li {
 		position: relative;
-        margin-left: .25em;
+        margin-left: .5em;
 	}
 
 	a {
@@ -74,7 +74,7 @@
 	
 	.menu-item-has-children,
 	.page-item-has-children {
-		min-width: 218px;
+		min-width: 120px;
 	}
 	.menu-item-has-children > a,
 	.page_item_has_children > a {
@@ -82,14 +82,18 @@
 	}
 }
 
+// Positioning of the drop down menu button
+
 button.dropdown-toggle {
 	position: absolute;
 	right: 0;
 	border: none;  
-	background: inherit;
+	background: transparent;
 	color: $color__mainblue;
 	line-height: 1.3em;
 	padding: .4em 1em .4em 0em;
+    height: 40px;
+    width: 40px;
 }
 
 .menu-toggle {
@@ -101,15 +105,42 @@ button.dropdown-toggle {
 	padding: .6em .8em;
 	font-size: 80%;
 	text-transform: uppercase;
+    background-color: transparent;
 	color: white;
-	border: 1px solid hsla(0, 0%, 100%, .3);
+    border: none;
 }
 
+button img.heart-menu {
+    width: 40px;
+    height: auto;
+}
 
 /* Toggle small menu and sub-menus on */
 .toggled-on ul,
 .sub-menu.toggled-on {
 	display: block;
+
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    
+    li:hover {
+        margin: 0;
+        background-color: $color__lightblue;
+        
+        &:first-of-type {
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;            
+        }
+        
+        &:last-of-type {
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+        
+        a {
+            color: white;
+        }
+    }
 }
 
 @media screen and (max-width: $query__small) {
@@ -136,6 +167,7 @@ button.dropdown-toggle {
 
     img.custom-logo {
         height: 120px;
+        width: auto;
     }
     
 }
@@ -146,6 +178,8 @@ button.dropdown-toggle {
 	}
 	
 	.main-navigation {
+        
+        position: relative;
         
 		.menu-item-has-children > a,
 		.page_item_has_children > a {
@@ -159,28 +193,73 @@ button.dropdown-toggle {
          
 			ul {
 				flex-direction: column;
-				background: hsla(0, 0%, 100%, .2);
+				background-color: white;
 				margin-left: 0;
                 justify-content: flex-end;                   
 
-				li {
-					padding-left: 0;
-					
-					a {
-				        background: none;
-                        margin-left: 0.2em;                      
-					}
-				}
-			}
-			
-			li {
-				a {
-					padding: .4em 1em; 
-				}
-			}
+				li a {
+                    background: none;
+                    margin-left: 0.2em;                      
+                }
+            }
+            
+            li {
+                a {
+                    padding: .4em 1em; 
+                }
+            }
 		}
+        
+        // Styling the drop down menu
+        
+        .toggled-on ul,
+        .sub-menu.toggled-on {
+            display: block;
+            position: absolute;
+            top: 42px;
+
+            background-color: transparent;
+            
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+
+            li {
+                background-color: white;
+            }
+            
+            li:hover {
+                margin: 0;
+                background-color: $color__lightblue;
+
+                &:first-of-type {
+                    border-top-left-radius: 12px;
+                    border-top-right-radius: 12px;            
+                }
+
+                &:last-of-type {
+                    border-bottom-left-radius: 12px;
+                    border-bottom-right-radius: 12px;
+                }
+
+                a {
+                    color: white;
+                }
+            }
+            
+            // Adjusting the highlight of the current page for the
+            // drop down menu
+            
+            .current_page_item > a,
+            .current-menu-item > a {
+                color: $color__mainblue;
+                background-color: transparent;
+            }
+            
+        }
 	}
 }
+
+// Adjusting the menu to fit on medium sized screens (iPads f.ex.)
 
 @media screen and (min-width: $query__medium) {
 	.main-navigation {

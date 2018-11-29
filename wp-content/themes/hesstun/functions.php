@@ -168,44 +168,7 @@ function filter_ptags_on_images($content){
 
 add_filter('the_content', 'filter_ptags_on_images');
 
-/**
- * Function to allow me to use SVG in WordPress
- *
- * Code snippet fetched from: https://themeisle.com/blog/add-svg-to-wordpress/
- */
-
-function add_file_types_to_uploads($file_types){
-	$new_filetypes = array();
-	$new_filetypes['svg'] = 'image/svg+xml';
-	$file_types = array_merge($file_types, $new_filetypes );
-	
-	return $file_types;
-}
 add_action('upload_mimes', 'add_file_types_to_uploads');
-
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-
-// Not sure if i want to use this option
-
-/**
-function hesstun_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'hesstun' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'hesstun' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'hesstun_widgets_init' );
-*/
 
 /**
  * Enqueue scripts and styles.
@@ -220,7 +183,7 @@ function hesstun_scripts() {
     
 	wp_enqueue_script( 'hesstun-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20181122', true );
 
-	wp_enqueue_script( 'hesstun-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20181123', true );    
+	wp_enqueue_script( 'hesstun-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20181123', true );     
     
     // Connecting the navigation with the Screen reader text
 	wp_localize_script( 'hesstun-navigation', 'hesstunScreenReaderText', array(
@@ -235,6 +198,17 @@ function hesstun_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'hesstun_scripts' );
+
+/**
+ * Trying out adding inline svg using a code snippet from Blue Coda
+ * https://www.bluecoda.com/blog/how-use-inline-svgs-wordpress
+ */
+
+function inline_svg($name){
+    $file = get_template_directory();
+    $file .= "/images/" . $name .".svg";
+    include($file);
+}
 
 /**
  * Implement the Custom Header feature.
@@ -262,9 +236,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-/**
- * Load SVG icon functions.
- */
-require get_template_directory() . '/inc/icon-functions.php';
-

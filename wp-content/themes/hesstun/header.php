@@ -11,7 +11,7 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?> class="no-svg">
+<html <?php language_attributes(); ?> class="svg">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +30,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Header', 'hesstun' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img class="heart-menu" src="images/Fav-icon-heart.png" alt=""></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
@@ -38,6 +38,7 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+        
 	</header><!-- #masthead -->
-
+    
 	<div id="content" class="site-content">

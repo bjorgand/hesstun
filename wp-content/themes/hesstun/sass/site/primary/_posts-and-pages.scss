@@ -134,9 +134,95 @@ div.post-navigation {
     }
 }
 
-.home h1 {
+// Changing the background illustration only on the homepage
+
+body.page-id-1719 {
+    
+    @media screen and (max-width: $query__medium){
+
+        background-image: url("http://www.hesstun.no/wp-content/uploads/2018/11/home_phone.jpg")!important;
+        background-repeat: no-repeat!important;
+        background-position: bottom center!important;
+        background-attachment: fixed!important;
+
+        // Adjusting the background illustrations to show only slightly on the bottom
+        
+        // Smallest mobile phones
+        .site-content {
+            margin-top: 20.5em;
+        }
+        
+        // A bit bigger mobile phones
+        @media screen and (min-width: 325px){
+        
+            .site-content {
+                margin-top: 26.5em;
+            }
+        }
+        
+        //Larger mobile phones
+        @media screen and (min-width: 390px){
+        
+            .site-content {
+                margin-top: 30.5em;
+            }
+        }
+        
+        // Medium iPads
+        
+        @media screen and (min-width: 750px){
+        
+            .site-content {
+                margin-top: 33.5em;
+            }
+        }
+        
+        // Large iPads
+        
+        @media screen and (min-width: 800px){
+        
+            .site-content {
+                margin-top: 19.5em;
+            }
+        }
+    }
+    
+    @media screen and (min-width: $query__medium){
+        background-image: url("http://www.hesstun.no/wp-content/uploads/2018/11/home_screen.jpg")!important;
+        background-size: cover!important;
+        background-repeat: no-repeat!important;
+        background-position: bottom center!important;
+        background-attachment: fixed!important;
+
+        // Adjusting the background illustrations to show only slightly on the bottom
+        
+        // iPad Pro
+        .site-content {
+                margin-top: 51.5em;
+        } 
+        
+        // Smaller desktop screens
+        @media screen and (min-width: 1025px){
+        
+            .site-content {
+                    margin-top: 20em;
+            } 
+        }  
+    }
+}
+
+// Making the layout for the pages with a white flat background above the texture
+
+// Using the template page_white-style with the class white-style to adress common styling
+
+// The page Hjem = .home
+// The page Historie = .page-id-1515
+// The page Reis Hit = .page-id-1521
+// The page Om oss = .page-id-2055
+
+.white-style h1 {
     background-color: $color__bg;
-    padding: .5em .5em 0;
+    padding: .5em;
     margin: 0 auto;
     
     &:first-of-type {
@@ -145,10 +231,26 @@ div.post-navigation {
     }
 }
 
-.home p {
+.white-style h2,
+.white-style h3,
+.white-style h4 {
+    background-color: $color__bg;
+    padding: .25em 6em;
+    margin: 0 auto;
+}
+
+// Changing the font-size to make room for a long word on the page Reis Hit
+
+@media screen and (max-width: $query__small){
+    .page-id-1521 h2 {
+        font-size: 2em;
+    }
+}
+
+.white-style p {
     background-color: $color__bg;
     margin: 0 auto;
-    padding: .25em 2em;
+    padding: .5em 2em;
     
     &:last-of-type {
         padding-bottom: 2em;
@@ -157,7 +259,7 @@ div.post-navigation {
     }
     
     @media screen and (min-width: $query__small){
-        padding: .5em 6em;
+        padding: .25em 8em;
         
         &:last-of-type {
             padding-bottom: 2.5em;
@@ -177,197 +279,17 @@ div.post-navigation {
         @media screen and (min-width: $query__small){
             display: inline-block;
         }
-    }
-        
+    }       
 }
 
-// Galleri page, it got classes in the page in the code view in WordPress
-// Galleri has the page id 1517 
-
-.page-id-1517 div.entry-content {
-    
-    h2 {
-        display: none;
-    }
-    
-    p {
-        color: white;
-        text-align: center; 
-        padding: 1em 2em 0;
-        font-weight: 700;
-    }
-        
-    @media screen and (min-width: $query__small){
-        h2 {
-            color: white;
-            display: block;
-            text-align: center;  
-            padding: 0 0 .25em 0;
-            margin-top: -.25em;
-        }
-
-        p {
-            padding: 0;
-            
-            &:first-of-type {
-                margin-bottom: .25em;
-            }
-        }
-        
-    }
-    
-    // Working with Nextgen Gallery classes   
-    
-    div.ngg-albumoverview {
-        margin-top: 2.75em;
-    }
-        
-    // Making the post thumbnails for the albums
-    
-    .ngg-albumoverview.default-view .ngg-album-compact,
-    .ngg-albumcompact {
-        background-color: $color__bg;
-        padding: 1.75em;
-        border-radius: 30px;
-        box-shadow: none;
-    
-        img {
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            color: white;
-        }
-    }
-    
-    .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc {
-        font-size: 1.5em;
-    }
-    
-    // Making the post thumbnails for the albums that shows the individual galleries
-    
-    .ngg-albumoverview.default-view .ngg-album-compact,
-    .ngg-albumcompact {
-        background-color: $color__bg;
-        padding: 1.75em;
-        border-radius: 30px;
-        box-shadow: none;
-    
-        img {
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            color: white;
-        }
-    }
-    
-    .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc {
-        font-size: 1.5em;
-    }
-    
-    // Working on the gallery pages, edit the thumbnail view to display with flex
-    // without the captions and the background on each thumbnail
-    
-    div.ngg-galleryoverview {
-        background-color: $color__bg;
-        padding: .75em;
-        border-radius: 30px;
-        display: flex!important;
-        flex-wrap: wrap;
-        align-content: space-around;      
-    }
-    
-    .ngg-template-caption div.ngg-gallery-thumbnail {
-        background-color: transparent;   
-        border: none;
-        margin: 0;
-        
-        span {
-            display: none;
-        }  
-        
-        img {
-            width: 100%;
-        }
-    }
-    
-    @media screen and (max-width: $query__small) {
-        
-        //Fixing the gallery to display better on mobile view i.e. full width
-        
-        .ngg-gallery-thumbnail-box {
-            width: 100%!important;
-        }
-        
-        a img {
-            padding-bottom: .5em;
-        }
-        
-        #ngg-image-1 a img {
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-        } 
-    }
+.white-style ul {
+    background-color: $color__bg;
+    margin: 0 auto;
+    padding: .5em 2em;
     
     @media screen and (min-width: $query__small){
-        
-        // Fixing the edges to fit the white box
-        // Now it only works for exactly 12 images… workaround for this somehow?
-        // And the gallery counts the images from 1 and up, so the first image in the
-        // schoolalbum is nr. 13. So be careful when adding new images, this list will need to be updated.
-
-        // Boat album
-        #ngg-image-1 a img {
-            border-top-left-radius: 20px;
-        } 
-        
-        #ngg-image-3 a img {
-            border-top-right-radius: 20px;
-        }
-        
-        #ngg-image-10 a img {
-            border-bottom-left-radius: 20px;
-        }
-        
-        #ngg-image-12 a img {
-            border-bottom-right-radius: 20px;
-        }  
-        // School album
-        #ngg-image-13 a img {
-            border-top-left-radius: 20px;
-        } 
-        
-        #ngg-image-15 a img {
-            border-top-right-radius: 20px;
-        }
-        
-        #ngg-image-22 a img {
-            border-bottom-left-radius: 20px;
-        }
-        
-        #ngg-image-24 a img {
-            border-bottom-right-radius: 20px;
-        } 
+        padding: .25em 8em;
     }
-
-    /* Cleaning up the overall margins / paddings */
-    ul.ngg-breadcrumbs,
-    .entry-content a {
-        padding-top: 0;
-        color: white;
-        font-size: .8em;
-        font-weight: 700;
-        letter-spacing: .1em;     
-    }
-}
-
-// Working on the captions in the lightbox
-
-div.sl-caption {
- opacity: 0;
-}
-
-/* Changes the image container to only display captions on hover */ 
-.sl-image:hover .sl-caption,
-.sl-image:active .sl-caption {
-    opacity: 1;
 }
 
 // Web kamera page, it got classes in the page in the code view in WordPress
@@ -385,8 +307,8 @@ div.sl-caption {
             padding-bottom: .15em;
         }
         
-        figcaption {
-            margin-bottom: 0;
+        figure {
+            margin: 0 auto;
             padding-bottom: 0;
         }
     }
