@@ -42,7 +42,7 @@ if ( ! class_exists( 'rtTPGInit' ) ):
 				'_builtin'        => false,
 				'capability_type' => 'page',
 				'hierarchical'    => true,
-				'menu_icon'       => $rtTPG->assetsUrl . 'images/rt-tgp-menu.png',
+				'menu_icon'       => $rtTPG->assetsUrl . 'images/rt-tpg-menu.png',
 				'rewrite'         => false,
 				'query_var'       => $rtTPG->post_type,
 				'supports'        => array(

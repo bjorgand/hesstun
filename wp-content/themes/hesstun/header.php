@@ -14,7 +14,8 @@
 <html <?php language_attributes(); ?> class="svg">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
@@ -30,7 +31,9 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img class="heart-menu" src="images/Fav-icon-heart.png" alt=""></button>
+			
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+            <img src="http://www.hesstun.no/wp-content/uploads/2018/11/Fav-icon-heart.png" width="35px" > </button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',

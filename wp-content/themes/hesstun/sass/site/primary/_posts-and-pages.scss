@@ -138,35 +138,28 @@ div.post-navigation {
 
 body.page-id-1719 {
     
-    @media screen and (max-width: $query__medium){
+    @media screen and (max-width: $query__small){
 
         background-image: url("http://www.hesstun.no/wp-content/uploads/2018/11/home_phone.jpg")!important;
+        background-repeat: no-repeat!important;
+        background-size: cover!important;
+        background-position: center center!important;
+    }
+    
+    @media screen and (min-width: $query__small){
+        background-image: url("http://www.hesstun.no/wp-content/uploads/2018/11/home_screen.jpg")!important;
+        background-size: cover!important;
         background-repeat: no-repeat!important;
         background-position: bottom center!important;
         background-attachment: fixed!important;
 
         // Adjusting the background illustrations to show only slightly on the bottom
         
-        // Smallest mobile phones
+        
+        // iPad Pro
         .site-content {
-            margin-top: 20.5em;
-        }
-        
-        // A bit bigger mobile phones
-        @media screen and (min-width: 325px){
-        
-            .site-content {
-                margin-top: 26.5em;
-            }
-        }
-        
-        //Larger mobile phones
-        @media screen and (min-width: 390px){
-        
-            .site-content {
-                margin-top: 30.5em;
-            }
-        }
+                margin-top: 51.5em;
+        } 
         
         // Medium iPads
         
@@ -182,30 +175,23 @@ body.page-id-1719 {
         @media screen and (min-width: 800px){
         
             .site-content {
-                margin-top: 19.5em;
+                margin-top: 20.5em;
             }
         }
-    }
-    
-    @media screen and (min-width: $query__medium){
-        background-image: url("http://www.hesstun.no/wp-content/uploads/2018/11/home_screen.jpg")!important;
-        background-size: cover!important;
-        background-repeat: no-repeat!important;
-        background-position: bottom center!important;
-        background-attachment: fixed!important;
-
-        // Adjusting the background illustrations to show only slightly on the bottom
-        
-        // iPad Pro
-        .site-content {
-                margin-top: 51.5em;
-        } 
         
         // Smaller desktop screens
         @media screen and (min-width: 1025px){
         
             .site-content {
-                    margin-top: 20em;
+                    margin-top: 24.5em;
+            } 
+        }  
+        
+        // Larger desktop screens
+        @media screen and (min-width: 1200px){
+        
+            .site-content {
+                    margin-top: 30em;
             } 
         }  
     }
@@ -220,30 +206,46 @@ body.page-id-1719 {
 // The page Reis Hit = .page-id-1521
 // The page Om oss = .page-id-2055
 
-.white-style h1 {
+.white-style h1,
+.white-style h2,
+.white-style h3 {
     background-color: $color__bg;
     padding: .5em;
     margin: 0 auto;
+}
     
+.white-style h1 {    
+
     &:first-of-type {
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
+    
+    // Changing the font-size to make room for long words
+
+    @media screen and (max-width: $query__small){
+        font-size: 2.4em;
+        padding: .25em .5em;
+    }
 }
 
-.white-style h2,
-.white-style h3,
-.white-style h4 {
-    background-color: $color__bg;
-    padding: .25em 6em;
-    margin: 0 auto;
-}
+.white-style h2 {
+    
+    // Changing the font-size to make room for long words
 
-// Changing the font-size to make room for a long word on the page Reis Hit
-
-@media screen and (max-width: $query__small){
-    .page-id-1521 h2 {
+    @media screen and (max-width: $query__small){
         font-size: 2em;
+        padding: .5em .5em .5em;
+    }
+}
+
+.white-style h3 {
+    
+    // Changing the font-size to make room for long words
+
+    @media screen and (max-width: $query__small){
+        font-size: 2em;
+        padding: .25em .5em .5em;
     }
 }
 
@@ -251,6 +253,7 @@ body.page-id-1719 {
     background-color: $color__bg;
     margin: 0 auto;
     padding: .5em 2em;
+    text-align: left;    
     
     &:last-of-type {
         padding-bottom: 2em;
@@ -259,7 +262,8 @@ body.page-id-1719 {
     }
     
     @media screen and (min-width: $query__small){
-        padding: .25em 8em;
+        padding: .25em 10em;
+        text-align: justify;         
         
         &:last-of-type {
             padding-bottom: 2.5em;
@@ -285,10 +289,10 @@ body.page-id-1719 {
 .white-style ul {
     background-color: $color__bg;
     margin: 0 auto;
-    padding: .5em 2em;
+    padding: .5em 3em;
     
     @media screen and (min-width: $query__small){
-        padding: .25em 8em;
+        padding: .25em 11em;
     }
 }
 
@@ -309,7 +313,7 @@ body.page-id-1719 {
         
         figure {
             margin: 0 auto;
-            padding-bottom: 0;
+            padding-bottom: .5em;
         }
     }
     .web-kamera-column-2 {
@@ -340,6 +344,7 @@ body.page-id-1719 {
             display: flex;
             background-color: transparent;
             width: $size__ratio-medium;
+            margin-top: 0;
             padding: 0;     
             justify-content: center;
         }

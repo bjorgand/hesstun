@@ -1,6 +1,14 @@
 NextGEN Gallery
 by Imagely
 
+= V3.1.0 - 11.28.2018 =
+* NEW:     Gutengerg block for NextGEN Gallery
+* Secured: Other options page
+* Updated: Freemius SDK
+* Fixed:   Getting started wizard compatible with Gutenberg
+* Fixed:   WPML redirects
+* Fixed:   Missing descriptions and tags when re-importing image metadata
+
 = V3.0.16 - 10.24.2018 =
 * Fixed    Fontawesome 4 compatibility
 

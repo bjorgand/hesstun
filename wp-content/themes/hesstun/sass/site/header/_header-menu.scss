@@ -30,6 +30,10 @@
 				&.focus > ul {
 					left: 100%;
 				}
+                
+                @media screen and (max-width: $query__small) {
+                    padding-left: 0;
+                }
 			}
 
 			a {
@@ -94,6 +98,12 @@ button.dropdown-toggle {
 	padding: .4em 1em .4em 0em;
     height: 40px;
     width: 40px;
+    
+    // Changing the position of the + sign in the menu
+    @media screen and (max-width: $query__small) {
+            width: 200px;
+        	padding-bottom: .8em;
+    }
 }
 
 .menu-toggle {
@@ -103,11 +113,13 @@ button.dropdown-toggle {
 	display: block;
 	margin: 1.2em 1.2em 0 0;
 	padding: .6em .8em;
-	font-size: 80%;
+	font-size: 90%;
+    font-weight: 700;
 	text-transform: uppercase;
     background-color: transparent;
-	color: white;
+	color: $color__darkblue;
     border: none;
+    text-decoration: underline;
 }
 
 button img.heart-menu {
@@ -119,12 +131,13 @@ button img.heart-menu {
 .toggled-on ul,
 .sub-menu.toggled-on {
 	display: block;
-
+    
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     
     li:hover {
         margin: 0;
+        border-radius: 12px;
         background-color: $color__lightblue;
         
         &:first-of-type {
@@ -138,7 +151,7 @@ button img.heart-menu {
         }
         
         a {
-            color: white;
+            color: $color__darkblue;
         }
     }
 }
@@ -168,6 +181,7 @@ button img.heart-menu {
     img.custom-logo {
         height: 120px;
         width: auto;
+        padding-right: 2em;
     }
     
 }

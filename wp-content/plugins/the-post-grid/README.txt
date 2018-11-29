@@ -4,7 +4,7 @@ Donate link:
 Tags: post grid, content grid, post display, post format, post view, blog display, news display, post
 Requires at least: 4
 Tested up to: 4.9
-Stable tag: 2.2.6
+Stable tag: 2.2.61
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -137,6 +137,9 @@ For any bug or suggestion please mail support@radiustheme.com
 
 
 == Changelog ==
+
+= 2.2.61 =
+* Add Gutenberg support
 
 = 2.2.5 =
 * Add Elementor Widget support

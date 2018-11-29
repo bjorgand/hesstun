@@ -5,7 +5,7 @@ Theme URI: http://github.com/bjorgand/hesstun/
 Author: Bjørg Helene Andorsen
 Author URI: http://bjorghelene.no/
 Description: A light and fresh theme based on the _s for the island Hamnøya in Nordland, Norway. Made for Hamnøya Grendelag høsten 2018.
-Version: 1.1.8
+Version: 1.2.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: hesstun
@@ -966,6 +966,12 @@ a:hover, a:active {
 	    justify-content: space-between;
 }
 
+@media screen and (max-width: 600px) {
+	.site-header {
+		display: block;
+	}
+}
+
 @media screen and (min-width: 600px) {
 	.site-header {
 		padding: 1.5em 2em 0.5em;
@@ -1030,6 +1036,12 @@ Header Menu
 	left: 100%;
 }
 
+@media screen and (max-width: 600px) {
+	.main-navigation ul ul li {
+		padding-left: 0;
+	}
+}
+
 .main-navigation ul ul a {
 	width: 200px;
 }
@@ -1090,6 +1102,13 @@ button.dropdown-toggle {
 	width: 40px;
 }
 
+@media screen and (max-width: 600px) {
+	button.dropdown-toggle {
+		width: 200px;
+		padding-bottom: .8em;
+	}
+}
+
 .menu-toggle {
 	position: absolute;
 	top: 10px;
@@ -1097,11 +1116,13 @@ button.dropdown-toggle {
 	display: block;
 	margin: 1.2em 1.2em 0 0;
 	padding: .6em .8em;
-	font-size: 80%;
+	font-size: 90%;
+	font-weight: 700;
 	text-transform: uppercase;
 	background-color: transparent;
-	color: white;
+	color: #024665;
 	border: none;
+	text-decoration: underline;
 }
 
 button img.heart-menu {
@@ -1120,6 +1141,7 @@ button img.heart-menu {
 .toggled-on ul li:hover,
 .sub-menu.toggled-on li:hover {
 	margin: 0;
+	border-radius: 12px;
 	background-color: #A5D6F6;
 }
 
@@ -1137,7 +1159,7 @@ button img.heart-menu {
 
 .toggled-on ul li:hover a,
 .sub-menu.toggled-on li:hover a {
-	color: white;
+	color: #024665;
 }
 
 @media screen and (max-width: 600px) {
@@ -1164,6 +1186,7 @@ button img.heart-menu {
 	img.custom-logo {
 		height: 120px;
 		width: auto;
+		padding-right: 2em;
 	}
 }
 
@@ -1388,43 +1411,16 @@ div.post-navigation p {
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
 	body.page-id-1719 {
 		background-image: url("http://www.hesstun.no/wp-content/uploads/2018/11/home_phone.jpg") !important;
 		background-repeat: no-repeat !important;
-		background-position: bottom center !important;
-		background-attachment: fixed !important;
-	}
-	body.page-id-1719 .site-content {
-		margin-top: 20.5em;
+		background-size: cover !important;
+		background-position: center center !important;
 	}
 }
 
-@media screen and (max-width: 1000px) and (min-width: 325px) {
-	body.page-id-1719 .site-content {
-		margin-top: 26.5em;
-	}
-}
-
-@media screen and (max-width: 1000px) and (min-width: 390px) {
-	body.page-id-1719 .site-content {
-		margin-top: 30.5em;
-	}
-}
-
-@media screen and (max-width: 1000px) and (min-width: 750px) {
-	body.page-id-1719 .site-content {
-		margin-top: 33.5em;
-	}
-}
-
-@media screen and (max-width: 1000px) and (min-width: 800px) {
-	body.page-id-1719 .site-content {
-		margin-top: 19.5em;
-	}
-}
-
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 600px) {
 	body.page-id-1719 {
 		background-image: url("http://www.hesstun.no/wp-content/uploads/2018/11/home_screen.jpg") !important;
 		background-size: cover !important;
@@ -1437,13 +1433,33 @@ div.post-navigation p {
 	}
 }
 
-@media screen and (min-width: 1000px) and (min-width: 1025px) {
+@media screen and (min-width: 600px) and (min-width: 750px) {
 	body.page-id-1719 .site-content {
-		margin-top: 20em;
+		margin-top: 33.5em;
 	}
 }
 
-.white-style h1 {
+@media screen and (min-width: 600px) and (min-width: 800px) {
+	body.page-id-1719 .site-content {
+		margin-top: 20.5em;
+	}
+}
+
+@media screen and (min-width: 600px) and (min-width: 1025px) {
+	body.page-id-1719 .site-content {
+		margin-top: 24.5em;
+	}
+}
+
+@media screen and (min-width: 600px) and (min-width: 1200px) {
+	body.page-id-1719 .site-content {
+		margin-top: 30em;
+	}
+}
+
+.white-style h1,
+.white-style h2,
+.white-style h3 {
 	background-color: #FFF;
 	padding: .5em;
 	margin: 0 auto;
@@ -1454,17 +1470,24 @@ div.post-navigation p {
 	border-top-right-radius: 20px;
 }
 
-.white-style h2,
-.white-style h3,
-.white-style h4 {
-	background-color: #FFF;
-	padding: .25em 6em;
-	margin: 0 auto;
+@media screen and (max-width: 600px) {
+	.white-style h1 {
+		font-size: 2.4em;
+		padding: .25em .5em;
+	}
 }
 
 @media screen and (max-width: 600px) {
-	.page-id-1521 h2 {
+	.white-style h2 {
 		font-size: 2em;
+		padding: .5em .5em .5em;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.white-style h3 {
+		font-size: 2em;
+		padding: .25em .5em .5em;
 	}
 }
 
@@ -1472,6 +1495,7 @@ div.post-navigation p {
 	background-color: #FFF;
 	margin: 0 auto;
 	padding: .5em 2em;
+	text-align: left;
 }
 
 .white-style p:last-of-type {
@@ -1482,7 +1506,8 @@ div.post-navigation p {
 
 @media screen and (min-width: 600px) {
 	.white-style p {
-		padding: .25em 8em;
+		padding: .25em 10em;
+		text-align: justify;
 	}
 	.white-style p:last-of-type {
 		padding-bottom: 2.5em;
@@ -1509,12 +1534,12 @@ div.post-navigation p {
 .white-style ul {
 	background-color: #FFF;
 	margin: 0 auto;
-	padding: .5em 2em;
+	padding: .5em 3em;
 }
 
 @media screen and (min-width: 600px) {
 	.white-style ul {
-		padding: .25em 8em;
+		padding: .25em 11em;
 	}
 }
 
@@ -1531,7 +1556,7 @@ div.post-navigation p {
 
 .page-id-1519 div.entry-content .web-kamera-column-1 figure {
 	margin: 0 auto;
-	padding-bottom: 0;
+	padding-bottom: .5em;
 }
 
 .page-id-1519 div.entry-content .web-kamera-column-2 {
@@ -1567,6 +1592,7 @@ div.post-navigation p {
 		display: flex;
 		background-color: transparent;
 		width: 60%;
+		margin-top: 0;
 		padding: 0;
 		-ms-flex-pack: center;
 		    justify-content: center;
@@ -1747,6 +1773,10 @@ object {
 	}
 }
 
+.rt-detail h2 {
+	text-align: center;
+}
+
 /*--------------------------------------------------------------
 ## Images
 --------------------------------------------------------------*/
@@ -1763,8 +1793,21 @@ object {
 	}
 }
 
+@media screen and (min-width: 600px) {
+	.image-left {
+		margin: 0 .5em;
+		padding-left: 10em;
+	}
+}
+
 .transparent-image {
 	margin-bottom: -1em;
+}
+
+@media screen and (max-width: 600px) {
+	.transparent-image {
+		display: none;
+	}
 }
 
 .thumbnails-centered {

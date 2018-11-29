@@ -28,7 +28,7 @@ if(!class_exists('rtTPGSCButton')):
                 global $rtTPG;
                 echo "<style>";
                 echo "i.mce-i-rt_tpg_scg{";
-                echo "background: url('".$rtTPG->assetsUrl ."images/rt-tgp-sc.png');";
+                echo "background: url('".$rtTPG->assetsUrl ."images/rt-tpg-sc.png');";
                 echo "}";
                 echo "</style>";
             }
