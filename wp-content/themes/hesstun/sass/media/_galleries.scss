@@ -1,76 +1,164 @@
-.gallery {
-	margin: 1.5em 0;
+// Galleri page, it got classes in the page in the code view in WordPress
+// Galleri has the page id 1517 
+
+.page-id-1517 div.entry-content,
+.page-id-1921 div.entry-content,
+.page-id-1924 div.entry-content,
+.page-id-1941 div.entry-content {
+    
+    h1 {
+        display: none;
+    }
+    
+    p {
+        color: white;
+        text-align: center; 
+        padding: 1em 2em 0;
+        font-weight: 700;
+    }
+        
+    @media screen and (min-width: $query__small){
+        h1,
+        h2 {
+            color: white;
+            display: block;
+            text-align: center;  
+            padding: 0 0 .25em 0;
+            margin-top: -.25em;
+        }
+
+        p {
+            padding: 0;
+            
+            &:first-of-type {
+                margin-bottom: .25em;
+            }
+        }
+        
+    }
+        
+    // Working on the gallery pages, edit the thumbnail view to display with flex
+    // without the captions and the background on each thumbnail
+    
+    div.ngg-galleryoverview {
+        background-color: $color__bg;
+        padding: .75em;
+        border-radius: 30px;
+        display: flex!important;
+        flex-wrap: wrap;
+        align-content: space-around;      
+    }
+    
+    .ngg-template-caption div.ngg-gallery-thumbnail,
+    .ngg-template-caption div.ngg-gallery-thumbnail-box {
+        background-color: transparent;   
+        border: none;
+        margin: 0;
+        
+        span {
+            display: none;
+        }  
+        
+        img {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-width: $query__small) {
+        
+        //Fixing the gallery to display better on mobile view i.e. full width
+        
+        .ngg-gallery-thumbnail-box {
+            width: 100%!important;
+        }
+        
+        a img {
+            padding-bottom: .5em;
+        }
+        
+        #ngg-image-1 a img,
+        #ngg-image-13 a img,
+        #ngg-image-24 a img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        } 
+        
+        #ngg-image-12 a img,
+        #ngg-image-23 a img,
+        #ngg-image-35 a img {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        } 
+    }
+    
+    @media screen and (min-width: $query__small){
+        
+        // Fixing the edges to fit the white box
+        // Now it only works for exactly 12 images… workaround for this somehow?
+        // And the gallery counts the images from 1 and up, so the first image in the
+        // schoolgallery is nr. 13. So be careful when adding new images, this list will need to be updated.
+
+        // Boat gallery
+        #ngg-image-1 a img {
+            border-top-left-radius: 20px;
+        } 
+        
+        #ngg-image-3 a img {
+            border-top-right-radius: 20px;
+        }
+        
+        #ngg-image-10 a img {
+            border-bottom-left-radius: 20px;
+        }
+        
+        #ngg-image-12 a img {
+            border-bottom-right-radius: 20px;
+        }  
+
+        // School gallery
+        #ngg-image-13 a img {
+            border-top-left-radius: 20px;
+        } 
+        
+        #ngg-image-15 a img {
+            border-top-right-radius: 20px;
+        }
+        
+        #ngg-image-21 a img {
+            border-bottom-left-radius: 20px;
+        }
+        
+        #ngg-image-23 a img {
+            border-bottom-right-radius: 20px;
+        } 
+            
+        // Nature gallery
+        #ngg-image-24 a img {
+            border-top-left-radius: 20px;
+        } 
+        
+        #ngg-image-26 a img {
+            border-top-right-radius: 20px;
+        }
+        
+        #ngg-image-33 a img {
+            border-bottom-left-radius: 20px;
+        }
+        
+        #ngg-image-35 a img {
+            border-bottom-right-radius: 20px;
+        } 
+    }
 }
 
-.gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
-	padding: 1em;
+// Working on the captions in the lightbox
 
-	img {
-		display: block;
-	}
-
-	a {
-		display: inline-block;
-		border-bottom: none;
-
-		&:hover,
-		&:focus {
-			border-bottom: none;
-			box-shadow: none;
-
-			img {
-				border-color: $color__interactive;
-			}
-		}
-
-		img {
-			padding: .5em;
-			margin: 0 auto;
-			border: 1px solid #fff;
-		}
-	}
+div.sl-caption {
+ opacity: 0;
 }
 
-.gallery-columns-2 .gallery-item {
-	max-width: 50%;
-}
-
-
-.gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
-}
-
-.gallery-columns-4 .gallery-item {
-	max-width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-	max-width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
-}
-
-.gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
-}
-
-.gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
-}
-
-.gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
-}
-
-.gallery-caption {
-	display: block;
-	margin: 0;
-	font-family: $font__sans;
-	border: none;
+/* Changes the image container to only display captions on hover */ 
+.sl-image:hover .sl-caption,
+.sl-image:active .sl-caption {
+    opacity: 1;
 }
